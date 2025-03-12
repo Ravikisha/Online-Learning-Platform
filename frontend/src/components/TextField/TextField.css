@@ -1,0 +1,12 @@
+input {
+    color: #9A999F;
+    font-size: 1.25rem;
+    font-family: Comfortaa, sans-serif;
+    height: 4rem;
+    width: 31.25rem;
+    background-color: #FFFFFF;
+    outline: none;
+    border: 1px solid #B3B4BB;
+    border-radius: 0.5rem;
+    padding: 0.25rem 1rem;
+}
