@@ -1,70 +1,84 @@
 import { useState } from "react";
-import TextField from "../../components/TextField/TextField";
-import Button from "../../components/Button/Button";
-import Dropdown from "../../components/Dropdown/Dropdown";
+import TextField from "../../components/TextField";
+import Button from "../../components/Button";
+import Dropdown from "../../components/Dropdown";
+import {toast} from "react-toastify";
 
-import "./RegisterForm.css";
+// import "./RegisterForm.css";
 
 export default function LoginForm() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [formData, setFormData] = useState({});
 
   const halfWidthTextfieldStyles = {
-    width: "14rem",
+    width: "48%",
+    height: "3.75rem",
   };
-  return (
-    <div className="main">
-      <div className="login-form">
-        <h1 className="login-heading">Start Learning</h1>
 
-        <div
-          style={{
-            width: "65%",
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
+  const updateFormData = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+
+  const registerUser = () => {
+    toast.success("User Registration Successful!");
+  }
+
+  return (
+    <div className="flex h-screen items-center justify-center">
+      <div className="flex h-[80vh] w-[40vw] flex-col gap-8 rounded-2xl bg-white px-28 py-8">
+        <h1 className="font-roboto my-4 text-center text-5xl font-bold text-[#3B3C44]">
+          Start Learning
+        </h1>
+
+        <div className="flex items-center justify-between rounded-lg">
           <TextField
             placeholder="First name"
-            onChange={(e) => setUsername(e.target.value)}
+            name="firstname"
             style={halfWidthTextfieldStyles}
+            onChange={updateFormData}
           />
           <TextField
             placeholder="Last name"
-            onChange={(e) => setUsername(e.target.value)}
+            name="lastname"
             style={halfWidthTextfieldStyles}
+            onChange={updateFormData}
           />
         </div>
 
         <TextField
+          name="email"
           placeholder="Email addresses"
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={updateFormData}
         />
 
         <TextField
+          name="password"
           placeholder="Enter password"
           type="password"
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={updateFormData}
         />
 
-        <div
-          style={{
-            width: "65%",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <label className="dropdownLabel" htmlFor="joining-as">I'm joining as a: </label>
+        <div className="flex items-center justify-between">
+          <label
+            htmlFor="joiningas"
+            className="font-comfortaa text-2xl text-[#9A999F]"
+          >
+            I'm joining as a:
+          </label>
           <Dropdown
+            name="joiningas"
             options={[
               { value: "student", label: "Student" },
               { value: "teacher", label: "Teacher" },
             ]}
+            onChange={updateFormData}
           />
         </div>
 
-        <Button onClick={() => console.log(username, password)}>Login</Button>
+        <Button onClick={registerUser}>Login</Button>
       </div>
     </div>
   );

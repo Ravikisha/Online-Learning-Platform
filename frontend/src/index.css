@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -22,4 +23,13 @@ body {
   min-height: 100vh;
   font-family: Roboto, sans-serif;
   background-color: #F6F7F9;
+}
+
+
+.font-comfortaa {
+  font-family: 'Comfortaa', cursive;
+}
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
 }
