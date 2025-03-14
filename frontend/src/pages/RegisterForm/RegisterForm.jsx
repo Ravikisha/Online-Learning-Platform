@@ -2,7 +2,7 @@ import { useState } from "react";
 import TextField from "../../components/TextField";
 import Button from "../../components/Button";
 import Dropdown from "../../components/Dropdown";
-import {toast} from "react-toastify";
+import { toast } from "react-toastify";
 
 // import "./RegisterForm.css";
 
@@ -21,10 +21,34 @@ export default function LoginForm() {
     });
   };
 
+  const registerUser = async () => {
+    const response = await fetch("http://localhost:3000/api/v1/user/register", {
+      method: "POST",
+      credentials: "include",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: formData.firstname + " " + formData.lastname,
+        email: formData.email,
+        password: formData.password,
+      }),
+    });
 
-  const registerUser = () => {
-    toast.success("User Registration Successful!");
-  }
+    const result = await response.json();
+    // console.log(result);
+    if (!result.success) {
+      throw new Error(result.message);
+    }
+
+    return result;
+  };
+
+  const handleUserRegistration = async () => {
+    toast.promise(registerUser, {
+      loading: "Registering user...",
+      success: { render: ({ data }) => data.message },
+      error: { render: ({ data }) => data.message },
+    });
+  };
 
   return (
     <div className="flex h-screen items-center justify-center">
@@ -50,6 +74,7 @@ export default function LoginForm() {
 
         <TextField
           name="email"
+          type="email"
           placeholder="Email addresses"
           onChange={updateFormData}
         />
@@ -78,7 +103,7 @@ export default function LoginForm() {
           />
         </div>
 
-        <Button onClick={registerUser}>Login</Button>
+        <Button onClick={handleUserRegistration}>Login</Button>
       </div>
     </div>
   );
