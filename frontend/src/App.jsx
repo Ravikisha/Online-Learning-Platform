@@ -1,13 +1,20 @@
-import { useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import LoginForm from "./pages/RegisterForm/RegisterForm";
+import RegisterForm from "./pages/RegisterForm";
+import LoginForm from "./pages/LoginForm";
+import UserProfile from "./pages/user/userprofile";
 
 function App() {
-
   return (
-    <>  
-    <LoginForm />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/register" element={<RegisterForm />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/profile" element={<UserProfile />} />
+
+        <Route path="*" element={"Not Found. Go to /register"} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

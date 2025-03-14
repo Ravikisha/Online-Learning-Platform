@@ -1,12 +1,11 @@
 import { useState } from "react";
-import TextField from "../../components/TextField";
-import Button from "../../components/Button";
-import Dropdown from "../../components/Dropdown";
+import TextField from "../components/TextField";
+import Button from "../components/Button";
+import Dropdown from "../components/Dropdown";
 import { toast } from "react-toastify";
 
-// import "./RegisterForm.css";
 
-export default function LoginForm() {
+export default function RegisterForm() {
   const [formData, setFormData] = useState({});
 
   const halfWidthTextfieldStyles = {
@@ -103,7 +102,7 @@ export default function LoginForm() {
           />
         </div>
 
-        <Button onClick={handleUserRegistration}>Login</Button>
+        <Button onClick={handleUserRegistration}>Register</Button>
       </div>
     </div>
   );
