@@ -1,0 +1,58 @@
+/* General Navbar Styles */
+.navbar {
+    margin-top: -5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10%;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Logo Styling */
+.nav-logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Navigation Links */
+.nav-container {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #ff6b6b;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 5%;
+    }
+
+    .nav-container {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+}
