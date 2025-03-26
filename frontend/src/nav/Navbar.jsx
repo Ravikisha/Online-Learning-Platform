@@ -9,6 +9,9 @@ export default function Navbar() {
         <img src={logo} alt="Logo" />
       </Link>
       <div className="nav-container">
+        <Link to="/Courses" className="nav-link">
+          Courses
+        </Link>
         <Link to="/Register" className="nav-link">
           Register
         </Link>

@@ -4,6 +4,7 @@ import RegisterForm from "./pages/RegisterForm";
 import LoginForm from "./pages/LoginForm";
 import UserProfile from "./pages/user/userprofile";
 import HomePage from "./pages/homepage/Home";
+import Courses from "./pages/courses/Courses";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/register" element={<RegisterForm />} />
         <Route path="/login" element={<LoginForm />} />
+        <Route path="/courses" element={<Courses />} />
         <Route path="/profile" element={<UserProfile />} />
 
         <Route path="*" element={"Not Found. Go to /register"} />

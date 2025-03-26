@@ -1,0 +1,31 @@
+{"SampleCourses":[
+    { "_id":1,
+      "name": "React for Beginners",
+      "release_date": "2024-02-15",
+      "price": 49.99,
+      "instructor": "John Doe",
+      "image": "https://plus.unsplash.com/premium_photo-1742082371099-aa9bec9f0b07?q=80&w=1952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    { "_id":2,
+      "name": "Machine Learning Basics",
+      "release_date": "2023-11-10",
+      "price": 79.99,
+      "instructor": "Jane Smith",
+      "image": "https://plus.unsplash.com/premium_photo-1742820353178-911bce846134?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    { "_id":3,
+      "name": "Advanced Java Programming",
+      "release_date": "2024-01-05",
+      "price": 59.99,
+      "instructor": "Alice Johnson",
+      "image": "https://images.unsplash.com/photo-1742599968125-a790a680a605?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    { "_id":4,
+      "name": "Full-Stack Web Development",
+      "release_date": "2023-09-20",
+      "price": 99.99,
+      "instructor": "Robert Brown",
+      "image": "https://images.unsplash.com/photo-1737894214298-feb9d237cf63?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
+  ]
+}
