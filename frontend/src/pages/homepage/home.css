@@ -1,0 +1,116 @@
+/* GENERAL STYLES */
+.homepage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5% 10%;
+    background-color: #ffffff;
+    min-height: 100vh;
+    gap: 20px;
+}
+
+/* LEFT CONTENT */
+.homepage-content {
+    flex: 1;
+    text-align: left;
+    max-width: 50%;
+}
+
+.homepage-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+}
+
+.highlight {
+    color: #ff6b6b;
+}
+
+.homepage-content p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* BUTTON STYLES */
+.register-btn,
+.login-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.register-btn {
+    background-color: #ff6b6b;
+    color: #fff;
+}
+
+.register-btn:hover {
+    background-color: #e64e4e;
+}
+
+.login-btn {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    text-decoration: underline;
+}
+
+/* RIGHT IMAGE */
+.homepage-img-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.homepage-img {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .homepage {
+        flex-direction: column;
+        text-align: center;
+        padding: 10% 5%;
+    }
+
+    .homepage-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .homepage-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .homepage-content p {
+        font-size: 1rem;
+    }
+
+    .register-btn,
+    .login-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .homepage-img-container {
+        margin-top: 20px;
+    }
+
+    .homepage-img {
+        width: 100%;
+        max-width: 350px;
+    }
+}
