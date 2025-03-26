@@ -1,4 +1,4 @@
-/* GENERAL STYLES */
+
 .homepage {
     display: flex;
     align-items: center;
@@ -9,7 +9,6 @@
     gap: 20px;
 }
 
-/* LEFT CONTENT */
 .homepage-content {
     flex: 1;
     text-align: left;
@@ -34,7 +33,6 @@
     line-height: 1.6;
 }
 
-/* BUTTON STYLES */
 .register-btn,
 .login-btn {
     display: inline-block;
@@ -65,7 +63,6 @@
     text-decoration: underline;
 }
 
-/* RIGHT IMAGE */
 .homepage-img-container {
     flex: 1;
     display: flex;
@@ -78,7 +75,6 @@
     height: auto;
 }
 
-/* MOBILE RESPONSIVENESS */
 @media (max-width: 768px) {
     .homepage {
         flex-direction: column;

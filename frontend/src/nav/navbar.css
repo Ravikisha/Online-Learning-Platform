@@ -1,4 +1,3 @@
-/* General Navbar Styles */
 .navbar {
     margin-top: -5rem;
     display: flex;
@@ -13,13 +12,11 @@
     z-index: 1000;
 }
 
-/* Logo Styling */
 .nav-logo img {
     height: 50px;
     width: auto;
 }
 
-/* Navigation Links */
 .nav-container {
     display: flex;
     gap: 20px;
@@ -37,8 +34,7 @@
     color: #ff6b6b;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
         align-items: center;
@@ -55,4 +51,4 @@
     .nav-link {
         font-size: 1rem;
     }
-}
+} */
