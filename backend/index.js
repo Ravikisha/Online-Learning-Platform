@@ -8,7 +8,7 @@ import userRoute from "./routes/user.route.js";
 import mediaRoute from "./routes/media.route.js";
 import courseRoute from "./routes/course.route.js";
 import courseProgressRoute from "./routes/courseProgress.route.js";
-// import purchaseRoute from "./routes/purchase.route.js";
+import purchaseRoute from "./routes/purchaseCourse.route.js";
 
 
 dotenv.config({});
@@ -20,6 +20,10 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(cookieParser());
+// static serve the upload folder
+app.use("/uploads", express.static("uploads"));
+
+
 
 app.use(cors({
     origin:"http://localhost:5173",
@@ -30,7 +34,7 @@ app.use("/api/v1/user", userRoute);
 app.use("/api/v1/media", mediaRoute);
 app.use("/api/v1/course", courseRoute);
 app.use("/api/v1/progress", courseProgressRoute);
-// app.use("/api/v1/purchase", purchaseRoute);
+app.use("/api/v1/purchase", purchaseRoute);
 
 
 

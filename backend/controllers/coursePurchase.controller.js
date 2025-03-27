@@ -22,6 +22,7 @@ export const createCheckoutSession = async (req, res) => {
       status: "pending",
     });
 
+    console.log("UserID: ", userId)
     // Create a Stripe checkout session
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
@@ -89,10 +90,11 @@ export const stripeWebhook = async (req, res) => {
 
   // Handle the checkout session completed event
   if (event.type === "checkout.session.completed") {
+  // if(true){
     console.log("check session complete is called");
 
     try {
-      const session = event.data.object;
+      // const session = event.data.object;
 
       const purchase = await CoursePurchase.findOne({
         paymentId: session.id,
@@ -147,7 +149,6 @@ export const getCourseDetailWithPurchaseStatus = async (req, res) => {
       .populate({ path: "lectures" });
 
     const purchased = await CoursePurchase.findOne({ userId, courseId });
-    console.log(purchased);
 
     if (!course) {
       return res.status(404).json({ message: "course not found!" });
