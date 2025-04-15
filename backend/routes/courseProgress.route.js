@@ -5,6 +5,7 @@ import {
   markAsCompleted,
   markAsInCompleted,
   updateLectureProgress,
+  getCertificate
 } from "../controllers/courseProgress.controller.js";
 
 const router = express.Router();
@@ -15,5 +16,6 @@ router
   .post(isAuthenticated, updateLectureProgress);
 router.route("/:courseId/complete").post(isAuthenticated, markAsCompleted);
 router.route("/:courseId/incomplete").post(isAuthenticated, markAsInCompleted);
+router.route("/:courseId/downloadCertificate").get(isAuthenticated, getCertificate);
 
 export default router;

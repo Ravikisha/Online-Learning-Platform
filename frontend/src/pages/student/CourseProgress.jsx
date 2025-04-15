@@ -91,11 +91,13 @@ const CourseProgress = () => {
           {completed ? (
             <div className="flex items-center">
               <CheckCircle className="h-4 w-4 mr-2" /> <span>Completed</span>{" "}
+
             </div>
           ) : (
             "Mark as completed"
           )}
         </Button>
+          <a href={`${MEDIA_URL}/api/v1/progress/${courseId}/downloadCertificate`} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline ml-2">Download Certificate</a>
       </div>
 
       <div className="flex flex-col md:flex-row gap-6">
